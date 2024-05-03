@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock title %}
+{% block main %}
+    <form method='post'>    
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">
+            SUBMIT
+        </button>
+    </form>    
+This is the register
+{% endblock main %}
