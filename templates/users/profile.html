@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}  HOME DOS PARÇA{% endblock title %}
+{% block main %}
+VOCE ESTÁ NA HOME
+{% if messages %}
+    <p> 
+        {% for message in messages  %}
+            {{message}}
+        {% endfor %}
+    </p>
+{% endif %}
+{% endblock main %}

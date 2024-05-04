@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock title %}
+{% block main %}
+{% if messages %}
+    <p> 
+        {% for message in messages  %}
+            {{message}}
+        {% endfor %}
+    </p>
+{% endif %}
+    <form method='post'>    
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">
+            SUBMIT
+        </button>
+    </form>    
+This is the Login
+{% endblock main %}
